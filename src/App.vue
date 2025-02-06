@@ -1,23 +1,31 @@
+<!-- app.vue -->
 <template>
   <div id="app">
-    <h1>Vinyl Collectie</h1>
+    <div class="container container--heading">
+      <h1>Vinyl Collectie</h1>
+    </div>
     <div v-if="albums.length">
       <ul class="albums">
-        <li v-for="album in albums" :key="album.id">
-          <img class="album__image" :src="album.cover_image" alt="">
-          <h3 class="album__title">{{ album.title }}</h3>
-          <p class="album__artist">{{ album.artist }}</p>
-        </li>
+        <single-album 
+          v-for="album in albums" 
+          :key="album.id"
+          :title="album.title"
+          :artist="album.artist"
+          :cover-image="album.cover_image"
+        />
       </ul>
     </div>
-    <p v-else>Loading...</p> 
   </div>
 </template>
 
 <script>
-import axios from 'axios'; 
+import axios from 'axios';
+import SingleAlbum from './components/singleAlbum.vue';
 
 export default {
+  components: {
+    SingleAlbum
+  },
   data() {
     return {
       albums: []  
@@ -49,11 +57,5 @@ export default {
   .albums {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-  }
-
-  .album__image {
-    width: 225px;
-    height: 225px;
-    margin-bottom: 0;
   }
 </style>
