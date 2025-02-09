@@ -10,7 +10,7 @@
           v-for="album in albums" 
           :key="album.id"
           :title="album.title"
-          :artist="album.artist"
+          :year="album.year"
           :cover-image="album.cover_image"
         />
       </ul>
@@ -56,6 +56,10 @@ export default {
 <style>
   .albums {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    padding: 0;
+    margin: 0 auto;
+    gap: 1rem;
+    max-width: 1400px;
   }
 </style>
