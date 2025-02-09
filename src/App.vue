@@ -2,18 +2,22 @@
 <template>
   <div id="app">
     <div class="container container--heading">
-      <h1>Vinyl Collectie</h1>
+      <h2 class="heading__title">De nieuwste LP's</h2>
+      <a class="heading__link" href="#">Bekijk alle nieuwe LP's ></a>
     </div>
-    <div v-if="albums.length">
-      <ul class="albums">
-        <single-album 
-          v-for="album in albums" 
-          :key="album.id"
-          :title="album.title"
-          :year="album.year"
-          :cover-image="album.cover_image"
-        />
-      </ul>
+    <div class="container">
+      <div v-if="albums.length">
+        <ul class="albums">
+          <single-album 
+            v-for="album in albums.slice(0, 5)" 
+            :key="album.id"
+            :title="album.title"
+            :year="album.year"
+            :genre="album.genre"
+            :cover-image="album.cover_image"
+          />
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -59,7 +63,20 @@ export default {
     grid-template-columns: repeat(5, minmax(150px, 1fr));
     padding: 0;
     margin: 0 auto;
-    gap: 1rem;
+    gap: 1.5rem;
     max-width: 1400px;
+  }
+
+  .heading__title {
+    margin-right: 1rem;
+    color: #DF8032;
+  }
+
+  .heading__link {
+    font-size: .9rem;
+    text-decoration: none;
+    margin: 0;
+    font-weight: 200;
+    margin-bottom: .2rem;
   }
 </style>
