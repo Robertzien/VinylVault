@@ -26,3 +26,22 @@ ul {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
+
+button {
+    border: solid 1.75px white;
+    background: none;
+    padding: .75rem .75rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-radius: 999rem;
+    cursor: pointer;
+    svg {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
