@@ -14,7 +14,7 @@
 
 <script>
 import axios from "axios";
-import RowOfAlbums from "./components/rowofAlbums.vue";
+import RowOfAlbums from "./components/rowOfAlbums.vue";
 import SectionHeading from "./components/sectionHeading.vue";
 import NavBar from "./components/navBar.vue";
 

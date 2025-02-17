@@ -5,6 +5,7 @@
 
 .container {
     padding: .75rem 3.5rem;
+    display: flex;
 }
 
 .container--heading {

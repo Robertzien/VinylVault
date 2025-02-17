@@ -31,7 +31,7 @@ export default {
 }
 
 .heading__link {
-	font-size: 0.9rem;
+	font-size: 14px;
 	text-decoration: none;
 	margin: 0;
 	font-weight: 200;
