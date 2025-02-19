@@ -3,6 +3,9 @@
 		<div class="navbar">
 			<NavBar />
 		</div>
+		<div class="hero">
+			<Hero />
+		</div>
 		<div class="section-heading">
 			<SectionHeading title="De nieuwste LP's" linkText="Bekijk alle nieuwe LP's" linkUrl="#" />
 		</div>
@@ -14,15 +17,18 @@
 
 <script>
 import axios from "axios";
-import RowOfAlbums from "./components/rowOfAlbums.vue";
-import SectionHeading from "./components/sectionHeading.vue";
-import NavBar from "./components/navBar.vue";
+import RowOfAlbums from "./components/sections/rowOfAlbums.vue";
+import SectionHeading from "./components/sections/sectionHeading.vue";
+import NavBar from "./components/main/nav.vue";
+import Hero from "./components/main/hero.vue";
+import './assets/styles.css'
 
 export default {
 	components: {
 		RowOfAlbums,
 		SectionHeading,
 		NavBar,
+		Hero,
 	},
 	data() {
 		return {

@@ -73,8 +73,5 @@
             margin-right: .5rem;
         }
     }
-    button:hover {
-        background: #df8032;
-    }
 }
 </style>

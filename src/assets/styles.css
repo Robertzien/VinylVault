@@ -1,0 +1,11 @@
+:root {
+    /* colors */
+    --orange: #df8032;
+
+    /* breakpoints */
+    --mobile-breakpoint: 480px;
+    --tablet-breakpoint: 786px;
+    --desktopS-breakpoint: 800px;
+    --desktopM-breakpoint: 1000px;
+    --desktopL-breakpoint: 1200px;
+}

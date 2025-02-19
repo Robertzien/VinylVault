@@ -27,7 +27,7 @@ export default {
 <style scoped>
 .heading__title {
 	margin-right: 1rem;
-	color: #df8032;
+	color: var(--orange);
 }
 
 .heading__link {
